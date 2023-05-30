@@ -221,7 +221,7 @@ arrow_down_wall.addEventListener('click', function(){
         let imgElement = document.createElement("img");
         imgElement.src = e.target.result;
         imgElement.style.maxWidth = "100%";
-        imgElement.classList.add('images-rendered')
+        imgElement.classList.add('images-rendered2')
         document.getElementById("one").appendChild(imgElement);
       };
 
