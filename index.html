@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./body.css" rel="stylesheet" />
+
+      <div class="body-container">
+        <div class="body-body">
+          <div class="body-right">
+            <div class="body-buton-group">
+              <img
+                src="public/external/buttondevider2509-inwq-800w.png"
+                alt="buttondevider2509"
+                class="body-buttondevider"
+              />
+              <button class="body-button" style="cursor: pointer;" onclick="saveDatahere()">
+                <span class="body-text"><span>Save Gallery</span></span>
+              </button>
+            </div>
+            <div class="body-position-group">
+              <div class="body-frame15">
+                <div class="body-frame47">
+                  <span class="body-text02"><span>Height</span></span>
+                  <div class="body-length" id="myElementLength">
+                    <div class="body-frame13">
+                      <span class="body-text04"><span><input type="number" placeholder="Height" id="input-length" style="outline:none;"></span></span>
+                    </div>
+                    <div class="body-frame12"  id="inputLength">
+                      <div class="body-frame11">
+                        <span class="body-text06"><span>cm</span></span>
+                        <img
+                          src="public/external/svg2348-cmoo.svg"
+                          alt="svg2348"
+                          class="body-svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-frame48">
+                  <span class="body-text08"><span>Width</span></span>
+                  <div class="body-length1">
+                    <div class="body-frame131">
+                      <span class="body-text10"><span><input type="number" placeholder="Width" id="input-width" style="outline:none;"></span></span>
+                    </div>
+                    <div class="body-frame121" id="myElement">
+                      <div class="body-frame111">
+                        <span class="body-text12"><span>cm</span></span>
+                        <img
+                          src="public/external/svg2359-0fbp.svg"
+                          alt="svg2359"
+                          class="body-svg1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="body-frame49">
+                  <span class="body-text14"><span>Wall</span></span>
+                  <div class="body-length2">
+                    <div class="body-frame132">
+                      <span class="body-text16">1</span>
+                    </div>
+                    <div class="arrow-container">
+                      <img
+                      src="public/external/arrow_drop_down_small.svg"
+                      alt="Frame122367"
+                      class="body-frame122"
+                    />
+                    </div>
+                  </div>
+                  <div class="test-wall" style="display:none;background-color: white;padding: 5px;">
+                    test
+                  </div>
+                </div>
+                <div class="body-edit">
+                  <div class="body-frame133">
+                    <img
+                      src="public/external/pencilsquare112371-tcna.svg"
+                      alt="PencilSquare112371"
+                      class="body-pencil-square11"
+                    />
+                    <span class="body-text17"><span>Edit</span></span>
+                  </div>
+                </div>
+              </div>
+              <span class="body-text19"><span>Position</span></span>
+            </div>
+            <div class="body-paintings-grou">
+              <div class="body-frame53">
+                <img
+                  src="public/external/rectangle33552-v8r9-200h.png"
+                  alt="Rectangle33552"
+                  class="body-rectangle3"
+                />
+                <img
+                  src="public/external/ellipse33553-0i6-200h.png"
+                  alt="Ellipse33553"
+                  class="body-ellipse3"
+                />
+              </div>
+              <div class="body-frame44">
+                <img
+                  src="public/external/rectangle32322-pp8s-200h.png"
+                  alt="Rectangle32322"
+                  class="body-rectangle31"
+                />
+                <img
+                  src="public/external/ellipse32323-33et-200h.png"
+                  alt="Ellipse32323"
+                  class="body-ellipse31"
+                />
+              </div>
+              <div class="body-frame54">
+                <img
+                  src="public/external/rectangle33555-5sjp-200h.png"
+                  alt="Rectangle33555"
+                  class="body-rectangle32"
+                />
+                <img
+                  src="public/external/ellipse33556-d8at-200h.png"
+                  alt="Ellipse33556"
+                  class="body-ellipse32"
+                />
+              </div>
+              <div class="body-frame55">
+                <img
+                  src="public/external/rectangle33558-t6ni-200h.png"
+                  alt="Rectangle33558"
+                  class="body-rectangle33"
+                />
+                <img
+                  src="public/external/ellipse33559-udqe-200h.png"
+                  alt="Ellipse33559"
+                  class="body-ellipse33"
+                />
+              </div>
+              <div class="body-frame56">
+                <img
+                  src="public/external/rectangle33561-3eyc-200h.png"
+                  alt="Rectangle33561"
+                  class="body-rectangle34"
+                />
+                <img
+                  src="public/external/ellipse33562-gal-200h.png"
+                  alt="Ellipse33562"
+                  class="body-ellipse34"
+                />
+              </div>
+              <div class="body-frame57">
+                <img
+                  src="public/external/rectangle33564-01ef-200h.png"
+                  alt="Rectangle33564"
+                  class="body-rectangle35"
+                />
+                <img
+                  src="public/external/ellipse33565-l5al-200h.png"
+                  alt="Ellipse33565"
+                  class="body-ellipse35"
+                />
+              </div>
+              <div class="body-frame52" id="preview">
+                <div class="body-frame14">
+                  <div class="body-length3">
+                    <div class="body-frame134">
+                      <div class="body-frame441">
+                        <img
+                          src="public/external/rectangle32316-7ykp-200h.png"
+                          alt="Rectangle32316"
+                          class="body-rectangle36"
+                        />
+                        <div class="body-group1">
+                          <img
+                            src="public/external/ellipse32318-aq8a-200h.png"
+                            alt="Ellipse32318"
+                            class="body-ellipse36"
+                          />
+                          <img
+                            src="public/external/check212319-zjnw.svg"
+                            alt="Check212319"
+                            class="body-check21"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="body-paintings-with-drop--down">
+                <div class="body-frame5">
+                  <span class="body-text21"><span>Paintings</span></span>
+                </div>
+                <div class="body-frame135">
+                  <div class="body-frame43">
+                    <img
+                      src="public/external/photo112307-4kq4.svg"
+                      alt="Photo112307"
+                      class="body-photo11"
+                    />
+                    <span class="body-text23">
+                      <input type="file" style="display: none;" id="file" accept="image/jpeg, image/png, image/svg+xml" onchange="handleFileSelect(event)" multiple>
+                      <span id="file-content">Drop your image here, or browse</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="dropdown-item">
+              <p>test</p>
+            </div>
+            <div class="body-floor-plan-group" id="dropdown">
+              <img
+                src="public/external/arrow-down.svg"
+                alt="ChevronDown112298"
+                class="body-chevron-down11"
+              />
+              <span class="body-text25"><span>Floor Plan</span></span>
+              <img
+                src="public/external/floorplansection2377-an7v-700w.png"
+                alt="FloorPlanSection2377"
+                class="body-floor-plan-section"
+              />
+            </div>
+            <div class="body-gallery-name-group">
+              <input
+                type="text"
+                placeholder="Enter name of gallery"
+                class="body-gallery-name-input"
+              />
+              <span class="body-text27"><span>Gallery Name</span></span>
+            </div>
+          </div>
+          <div class="body-left" id="imageContainer">
+            <span class="body-text29"><span>Wall 1</span></span>
+            <img
+              src="public/external/placeholdervirtualroom3512-sq2x-700h.png"
+              alt="PlaceholderVirtualRoom3512"
+              class="body-placeholder-virtual-room"
+              
+            />
+            <div class="body-placeholder-virtual-room display-items" style=" box-sizing: border-box; height: 250px; top: 288px;"> 
+              <div class="item one" id="one"></div>
+              <div class="item two"></div>
+              <div class="item three"></div>
+              <div class="item four"></div>
+            </div>
+            <div class="body-next">
+              <img
+                src="public/external/ellipse13519-b8wg-200h.png"
+                alt="Ellipse13519"
+                class="body-ellipse1"
+                onclick="next()"
+              />
+              <img
+                src="public/external/teenyiconsarrowleftsolid3520-713.svg"
+                alt="teenyiconsarrowleftsolid3520"
+                class="body-teenyiconsarrowleftsolid"
+                onclick="previous()"
+              />
+            </div>
+            <div class="body-prev">
+              <img
+                src="public/external/ellipse13547-944q-200h.png"
+                alt="Ellipse13547"
+                class="body-ellipse11"
+              />
+              <img
+                src="public/external/teenyiconsarrowleftsolid3548-j4bb.svg"
+                alt="teenyiconsarrowleftsolid3548"
+                class="body-teenyiconsarrowleftsolid1"
+              />
+            </div>
+            <div class="body-zoom">
+              <img
+                src="public/external/icbaselineplus3514-gh4b.svg"
+                alt="icbaselineplus3514"
+                class="body-icbaselineplus"
+                id="zoomInButton"
+              />
+              <img
+                src="public/external/mdiminus3516-o3df.svg"
+                alt="mdiminus3516"
+                class="body-mdiminus"
+                id="zoomOutButton"
+              />
+            </div>
+            <div class="body-walls">
+              <div class="body-wall5">
+                <span class="body-text31"><span>WALL 5</span></span>
+              </div>
+              <div class="body-wall4">
+                <span class="body-text33"><span>WALL 4</span></span>
+              </div>
+              <div class="body-wall3">
+                <span class="body-text35"><span>WALL 3</span></span>
+              </div>
+              <div class="body-wall2">
+                <span class="body-text37"><span>WALL 2</span></span>
+              </div>
+              <div class="body-wall1">
+                <span class="body-text39"><span>WALL 1</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
