@@ -1112,13 +1112,58 @@
 /* Images Rendered */
 
 .images-rendered {
-  width: 107px;
-  height: 60px;
+  width: 200px;
+  height: 80px;
+  margin-right: 20px;
+  border: 1px solid #9BABB9;
+  border-radius: 5px;
 }
 
 .images-rendered2 {
   width: 107px;
   height: 170px;
 }
+
+/* Checkbox  */
+
+/* .image-container {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.image-checkbox {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+} */
+
+/* .uploaded-images {
+  position:relative;
+  margin-left: 20px;
+  padding: 0;
+} */
+
+/* container images */
+
+/* .container-images {
+  position: relative;
+  background-color: black;
+  left: 0;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px;
+  width: 130px;
+}
+li {
+  padding-bottom: 2px;
+}
+
 
 

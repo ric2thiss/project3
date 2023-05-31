@@ -197,17 +197,27 @@ arrow_down_wall.addEventListener('click', function(){
   function handleFileSelect(event) {
     let file = event.target.files[0];
     let reader = new FileReader();
-
+  
     reader.onload = function(e) {
-      let imgElement = document.createElement("img");
-      imgElement.src = e.target.result;
-      imgElement.style.maxWidth = "100%";
-      imgElement.classList.add('images-rendered')
-      document.getElementById("preview").appendChild(imgElement);
+      let container = document.createElement('div');
+      container.classList.add('container-images');
+      container.innerHTML = `
+        <div style="position: relative;">
+          <img src="${e.target.result}" class="uploaded-images" width="80" height="80" onclick="toggleCheckbox(this)"/>
+          <input type="checkbox" style="position: absolute; bottom: 5px; right: 5px;" />
+        </div>
+      `;
+      document.getElementById("preview").appendChild(container);
     };
-
+  
     reader.readAsDataURL(file);
   }
+  
+  function toggleCheckbox(image) {
+    let checkbox = image.parentNode.querySelector('input[type="checkbox"]');
+    checkbox.checked = !checkbox.checked;
+  }
+  
 
 // Save Button
   function saveDatahere() {
@@ -226,6 +236,7 @@ arrow_down_wall.addEventListener('click', function(){
       };
 
       reader.readAsDataURL(file);
+      console.log(reader.readAsDataURL(file));
     }
   }
 
@@ -285,6 +296,19 @@ arrow_down_wall.addEventListener('click', function(){
     items[currentIndex].style.display = 'block';
   }
 
+
+  // Walls 
+
+  const walls = document.querySelectorAll('.walls');
+  const currentWall = document.querySelector('.body-text16');
+  console.log(currentWall)
+
+  for(let wall of walls){
+    wall.addEventListener('click', () => {
+      wall.style.cursor = "pointer";
+      currentWall.textContent = wall.textContent
+    })
+  }
 
 
 
