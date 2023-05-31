@@ -203,7 +203,7 @@ arrow_down_wall.addEventListener('click', function(){
       container.classList.add('container-images');
       container.innerHTML = `
         <div style="position: relative;">
-          <img src="${e.target.result}" class="uploaded-images" width="80" height="80" onclick="toggleCheckbox(this)"/>
+          <img src="${e.target.result}" class="uploaded-images" width="100" height="100" onclick="toggleCheckbox(this)"/>
           <input type="checkbox" style="position: absolute; bottom: 5px; right: 5px;" />
         </div>
       `;
