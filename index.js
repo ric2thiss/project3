@@ -169,10 +169,26 @@ const test_Wall = document.querySelector('.test-wall')
 arrow_down_wall.addEventListener('click', function(){
   if(test_Wall.style.display === "none"){
     test_Wall.style.display = "block"
+    test_Wall.style.cursor = "pointer"
   }else{
     test_Wall.style.display = "none"
   }
 })
+
+ // Walls 
+
+ const walls = document.querySelectorAll('.walls');
+ const currentWall = document.querySelector('.body-text16');
+ console.log(currentWall)
+
+ for(let wall of walls){
+   wall.addEventListener('click', () => {
+    //  wall.style.cursor = "pointer";
+     currentWall.textContent = wall.textContent
+     test_Wall.style.display = "none";
+
+   })
+ }
 
 //  The Data that Saved 
 
@@ -194,29 +210,66 @@ arrow_down_wall.addEventListener('click', function(){
 
 
   // Render Image upon selecting in my computer
-  function handleFileSelect(event) {
-    let file = event.target.files[0];
-    let reader = new FileReader();
+  // function handleFileSelect(event) {
+  //   let file = event.target.files[0];
+  //   let reader = new FileReader();
   
+  //   console.log(file)
+  //   reader.onload = function(e) {
+  //     let container = document.createElement('div');
+  //     container.classList.add('container-images');
+  //     container.innerHTML = `
+  //       <div style="position: relative;">
+  //         <img src="${e.target.result}" class="uploaded-images" width="100" height="100" onclick="toggleCheckbox(this)"/>
+  //         <input type="checkbox" style="position: absolute; bottom: 5px; right: 5px;" />
+  //       </div>
+  //     `;
+  //     document.getElementById("preview").appendChild(container);
+  //   };
+  
+  //   reader.readAsDataURL(file);
+  // }
+  
+  // function toggleCheckbox(image) {
+  //   let checkbox = image.parentNode.querySelector('input[type="checkbox"]');
+  //   checkbox.checked = !checkbox.checked;
+  // }
+// ---------------------
+function handleFileSelect(event) {
+  let files = event.target.files;
+  let reader;
+
+  for (let i = 0; i < files.length; i++) {
+    let file = files[i];
+    reader = new FileReader();
+
     reader.onload = function(e) {
       let container = document.createElement('div');
       container.classList.add('container-images');
       container.innerHTML = `
         <div style="position: relative;">
-          <img src="${e.target.result}" class="uploaded-images" width="100" height="100" onclick="toggleCheckbox(this)"/>
+          <img src="${e.target.result}" class="uploaded-images" width="80" height="80" onclick="toggleCheckbox(this)"/>
           <input type="checkbox" style="position: absolute; bottom: 5px; right: 5px;" />
         </div>
       `;
       document.getElementById("preview").appendChild(container);
     };
-  
+
     reader.readAsDataURL(file);
   }
-  
-  function toggleCheckbox(image) {
-    let checkbox = image.parentNode.querySelector('input[type="checkbox"]');
-    checkbox.checked = !checkbox.checked;
-  }
+}
+
+function toggleCheckbox(image) {
+  let checkbox = image.parentNode.querySelector('input[type="checkbox"]');
+  checkbox.checked = !checkbox.checked;
+}
+
+
+
+
+
+
+  // ------------------
   
 
 // Save Button
@@ -296,19 +349,6 @@ arrow_down_wall.addEventListener('click', function(){
     items[currentIndex].style.display = 'block';
   }
 
-
-  // Walls 
-
-  const walls = document.querySelectorAll('.walls');
-  const currentWall = document.querySelector('.body-text16');
-  console.log(currentWall)
-
-  for(let wall of walls){
-    wall.addEventListener('click', () => {
-      wall.style.cursor = "pointer";
-      currentWall.textContent = wall.textContent
-    })
-  }
 
 
 
