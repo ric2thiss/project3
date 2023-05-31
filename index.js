@@ -273,25 +273,63 @@ function toggleCheckbox(image) {
   
 
 // Save Button
-  function saveDatahere() {
-    let fileInput = document.getElementById("file");
-    let file = fileInput.files[0];
 
-    if (file) {
-      let reader = new FileReader();
+// function saveDatahere() {
+//   let checkboxes = document.querySelectorAll('.container-images input[type="checkbox"]');
+  
+//   for (let i = 0; i < checkboxes.length; i++) {
+//     let checkbox = checkboxes[i];
+//     if (checkbox.checked) {
+//       let imageContainer = checkbox.parentNode.parentNode;
+//       let imgElement = imageContainer.querySelector('img');
+//       imgElement.style.maxWidth = "100%";
+//       imgElement.classList.add('images-rendered2');
+//       document.getElementById("one").appendChild(imgElement.cloneNode());
+//     }
+//   }
+// }
 
-      reader.onload = function(e) {
-        let imgElement = document.createElement("img");
-        imgElement.src = e.target.result;
-        imgElement.style.maxWidth = "100%";
-        imgElement.classList.add('images-rendered2')
-        document.getElementById("one").appendChild(imgElement);
-      };
 
-      reader.readAsDataURL(file);
-      console.log(reader.readAsDataURL(file));
-    }
+function saveDatahere() {
+  let fileInput = document.getElementById("file");
+  let files = fileInput.files;
+
+  for (let i = 0; i < files.length; i++) {
+    let file = files[i];
+    let reader = new FileReader();
+
+    reader.onload = function(e) {
+      let imgElement = document.createElement("img");
+      imgElement.src = e.target.result;
+      imgElement.style.maxWidth = "100%";
+      imgElement.classList.add('images-rendered2');
+      document.getElementById("one").appendChild(imgElement);
+    };
+
+    reader.readAsDataURL(file);
   }
+}
+
+
+  // function saveDatahere() {
+  //   let fileInput = document.getElementById("file");
+  //   let file = fileInput.files[0];
+
+  //   if (file) {
+  //     let reader = new FileReader();
+
+  //     reader.onload = function(e) {
+  //       let imgElement = document.createElement("img");
+  //       imgElement.src = e.target.result;
+  //       imgElement.style.maxWidth = "100%";
+  //       imgElement.classList.add('images-rendered2')
+  //       document.getElementById("one").appendChild(imgElement);
+  //     };
+
+  //     reader.readAsDataURL(file);
+  //     console.log(reader.readAsDataURL(file));
+  //   }
+  // }
 
   // Zoom in and Zoom out
 
