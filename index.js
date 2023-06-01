@@ -35,9 +35,9 @@ upload_file.addEventListener('click', function() {
   file.click();
 });
 
-file.addEventListener('change', function() {
-  file_content.textContent = file.value.split('\\').pop(); // Extract the filename from the full file path
-});
+// file.addEventListener('change', function() {
+//   file_content.textContent = file.value.split('\\').pop(); // Extract the filename from the full file path
+// });
 
 
 
@@ -164,6 +164,10 @@ image2.style.pointerEvents = "none";
 
 // Arrow for Wall
 
+const walls = document.querySelectorAll('.walls');
+const currentWall = document.querySelector('.body-text16');
+// const number1 = document.getElementById('hidden');
+
 const arrow_down_wall = document.querySelector('.arrow-container');
 const test_Wall = document.querySelector('.test-wall')
 arrow_down_wall.addEventListener('click', function(){
@@ -176,17 +180,13 @@ arrow_down_wall.addEventListener('click', function(){
 })
 
  // Walls 
-
- const walls = document.querySelectorAll('.walls');
- const currentWall = document.querySelector('.body-text16');
- console.log(currentWall)
+//  console.log(currentWall)
 
  for(let wall of walls){
    wall.addEventListener('click', () => {
     //  wall.style.cursor = "pointer";
      currentWall.textContent = wall.textContent
      test_Wall.style.display = "none";
-
    })
  }
 
@@ -386,6 +386,8 @@ function saveDatahere() {
     }
     items[currentIndex].style.display = 'block';
   }
+
+
 
 
 
