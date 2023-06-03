@@ -7,21 +7,38 @@ galleryName_input.addEventListener("focusout", function(){
     galleryName_input.style.setProperty('border-color', 'rgba(154, 170, 184, 1)');
 });
 
+// Paintings Section
+const paintings_Section = document.getElementById('paintings-data-section');
 // Floor Plan
+
 const floor_plan = document.getElementById('dropdown');
 const dropdown_items = document.getElementById('dropdown-item');
 const icon_dropdown = document.querySelector('.body-chevron-down11');
+const preview = document.getElementById('preview')
 
 dropdown_items.style.display = 'none';
 floor_plan.addEventListener('click',function(){
     if(dropdown_items.style.display === 'none'){
+      // how to add settimeout?
+      setTimeout(() => {
         dropdown_items.style.display = 'block';
+      },110)
+
+        // dropdown_items.style.display = 'block';
         icon_dropdown.src = "up-arrow-svgrepo-com.svg";
+        paintings_Section.style.top = "85px";
+        preview.style.height = '100px';
+        preview.style.top = "270px";
+        
     }else{
         dropdown_items.style.display = 'none';
         icon_dropdown.src = "public/external/arrow-down.svg"
+        paintings_Section.style.top = "0px";
+        preview.style.height = '200px';
+        preview.style.top = "180px";
     }
     dropdown_items.classList.add('container-dropdown');
+
 })
 
 // Upload file section
@@ -234,7 +251,10 @@ arrow_down_wall.addEventListener('click', function(){
   //   let checkbox = image.parentNode.querySelector('input[type="checkbox"]');
   //   checkbox.checked = !checkbox.checked;
   // }
-// ---------------------
+// --------------------
+
+
+// -------- Upload Images Section
 function handleFileSelect(event) {
   let files = event.target.files;
   let reader;
@@ -258,6 +278,7 @@ function handleFileSelect(event) {
     reader.readAsDataURL(file);
   }
 }
+
 
 function toggleCheckbox(image) {
   let checkbox = image.parentNode.querySelector('input[type="checkbox"]');
