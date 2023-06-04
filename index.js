@@ -24,7 +24,6 @@ floor_plan.addEventListener('click',function(){
         dropdown_items.style.display = 'block';
       },110)
 
-        // dropdown_items.style.display = 'block';
         icon_dropdown.src = "up-arrow-svgrepo-com.svg";
         paintings_Section.style.top = "85px";
         preview.style.height = '100px';
@@ -51,14 +50,6 @@ upload_file.style.cursor = "pointer";
 upload_file.addEventListener('click', function() {
   file.click();
 });
-
-// file.addEventListener('change', function() {
-//   file_content.textContent = file.value.split('\\').pop(); // Extract the filename from the full file path
-// });
-
-
-
-
 
 // Position ( Width & Height )
 
@@ -170,12 +161,12 @@ imageLength.addEventListener("wheel", function (e) {
 
 // cm image to not be dragable 
   
-const image1 = document.querySelector('.body-svg1')
-const image2 = document.querySelector('.body-svg')
+const image1 = document.querySelector('.body-svg')
+const image2 = document.querySelector('.body-svg1')
 image1.style.pointerEvents = "none";
+image1.style.userSelect = 'none';
 image2.style.pointerEvents = "none";
-// const height_container = document.querySelector('.body-text06');
-// height_container.style.pointerEvents = "none";
+image2.style.userSelect = 'none';
 
 
 
@@ -183,7 +174,6 @@ image2.style.pointerEvents = "none";
 
 const walls = document.querySelectorAll('.walls');
 const currentWall = document.querySelector('.body-text16');
-// const number1 = document.getElementById('hidden');
 
 const arrow_down_wall = document.querySelector('.arrow-container');
 const test_Wall = document.querySelector('.test-wall')
@@ -197,7 +187,6 @@ arrow_down_wall.addEventListener('click', function(){
 })
 
  // Walls 
-//  console.log(currentWall)
 
  for(let wall of walls){
    wall.addEventListener('click', () => {
@@ -207,61 +196,21 @@ arrow_down_wall.addEventListener('click', function(){
    })
  }
 
-//  The Data that Saved 
-
-// function saveData() {
-//     let width = inputWidth.value;
-//     let length = inputLength.value;
-//     // let nameofPaint = input_text.value;
-//     // let description = input_description.value;
-//     alert(`Name of Painting: ${galleryName_input.value}\n Height: ${length}cm\n Width : ${width}cm\n Photo: ${file_content.value}`);
-
-//   }
-
-  // function deleteData() {
-  //   const confirmDelete = confirm("Are you sure you want to delete?");
-  //   if (confirmDelete) {
-  //     alert("Deleted");
-  //   }
-  // }
-
-
-  // Render Image upon selecting in my computer
-  // function handleFileSelect(event) {
-  //   let file = event.target.files[0];
-  //   let reader = new FileReader();
-  
-  //   console.log(file)
-  //   reader.onload = function(e) {
-  //     let container = document.createElement('div');
-  //     container.classList.add('container-images');
-  //     container.innerHTML = `
-  //       <div style="position: relative;">
-  //         <img src="${e.target.result}" class="uploaded-images" width="100" height="100" onclick="toggleCheckbox(this)"/>
-  //         <input type="checkbox" style="position: absolute; bottom: 5px; right: 5px;" />
-  //       </div>
-  //     `;
-  //     document.getElementById("preview").appendChild(container);
-  //   };
-  
-  //   reader.readAsDataURL(file);
-  // }
-  
-  // function toggleCheckbox(image) {
-  //   let checkbox = image.parentNode.querySelector('input[type="checkbox"]');
-  //   checkbox.checked = !checkbox.checked;
-  // }
-// --------------------
-
-
 // -------- Upload Images Section
+let files;
+let reader;
+let fileSaved;
 function handleFileSelect(event) {
-  let files = event.target.files;
-  let reader;
+  files = event.target.files;
+  let file;
+
 
   for (let i = 0; i < files.length; i++) {
-    let file = files[i];
+    file = files[i];
+    fileSaved = file
     reader = new FileReader();
+    // console.log(reader)
+    
 
     reader.onload = function(e) {
       let container = document.createElement('div');
@@ -311,25 +260,6 @@ function toggleCheckbox(image) {
 // }
 
 
-function saveDatahere() {
-  let fileInput = document.getElementById("file");
-  let files = fileInput.files;
-
-  for (let i = 0; i < files.length; i++) {
-    let file = files[i];
-    let reader = new FileReader();
-
-    reader.onload = function(e) {
-      let imgElement = document.createElement("img");
-      imgElement.src = e.target.result;
-      imgElement.style.maxWidth = "100%";
-      imgElement.classList.add('images-rendered2');
-      document.getElementById("one").appendChild(imgElement);
-    };
-
-    reader.readAsDataURL(file);
-  }
-}
 
 
   // function saveDatahere() {
@@ -406,6 +336,19 @@ function saveDatahere() {
       items[i].style.display = 'none';
     }
     items[currentIndex].style.display = 'block';
+  }
+
+  function saveData() {
+    let width = inputWidth.value;
+    let length = inputLength.value;
+
+    alert(`
+    Name of Painting: ${galleryName_input.value}\n
+    Height: ${length}cm\n
+    Width : ${width}cm\n
+    Wall: ${currentWall.textContent}
+    Photo: ${fileSaved}`);
+
   }
 
 
