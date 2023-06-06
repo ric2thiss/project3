@@ -297,7 +297,7 @@ function toggleCheckbox(image) {
 
     zoomOutButton.addEventListener("click", function() {
       currentScale -= 0.1;
-      updateImageScale();
+      updateImageScale();s
     });
 
     function updateImageScale() {
@@ -309,34 +309,174 @@ function toggleCheckbox(image) {
 
 
   // Next and Previous function
+  const WallTitle = document.querySelector('.body-text29');
+  const wall_a1 = document.getElementById('wall-a1');
+  const wall_1 = document.getElementById('wall-1');
+  const body_wall1 = document.querySelector('.body-wall1');
+  const wall_a2 = document.getElementById('wall-a2');
+  const wall_2 = document.getElementById('wall-2');
+  const wall_3 = document.getElementById('wall-3');
+  const wall_a3 = document.getElementById('wall-a3');
+  const wall_4 = document.getElementById('wall-4');
+  const wall_a4 = document.getElementById('wall-a4');
+  const wall_5 = document.getElementById('wall-5');
+  const wall_a5 = document.getElementById('wall-a5');
 
-  var currentIndex = 0;
-  var items = document.getElementsByClassName('item');
+  const wallNumber = document.querySelectorAll('wallNumber')
+  console.log(wallNumber)
+  function next() {
+    
+    if(WallTitle.textContent.toLowerCase() === wall_a1.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a2.textContent;
+      wall_a2.style.color = 'rgba(0, 0, 0, 1)';
+      wall_2.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_1.style.backgroundColor = 'transparent';
+      wall_1.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a1.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }else if(WallTitle.textContent.toLowerCase() === wall_a2.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a3.textContent;
+      wall_a3.style.color = 'rgba(0, 0, 0, 1)';
+      wall_3.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_2.style.backgroundColor = 'transparent';
+      wall_2.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a2.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }else if(WallTitle.textContent.toLowerCase() === wall_a3.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a4.textContent;
+      wall_a4.style.color = 'rgba(0, 0, 0, 1)';
+      wall_4.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_3.style.backgroundColor = 'transparent';
+      wall_3.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a3.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }else if(WallTitle.textContent.toLowerCase() === wall_a4.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a5.textContent;
+      wall_a5.style.color = 'rgba(0, 0, 0, 1)';
+      wall_5.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_4.style.backgroundColor = 'transparent';
+      wall_4.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a4.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }else if(WallTitle.textContent.toLowerCase() === wall_a5.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a1.textContent;
+      wall_a1.style.color = 'rgba(0, 0, 0, 1)';
+      wall_1.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_5.style.backgroundColor = 'transparent';
+      wall_5.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a5.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }
+
+  }
+
 
   function previous() {
-    if (currentIndex === 0) {
-      currentIndex = items.length - 1;
-    } else {
-      currentIndex--;
+    if(WallTitle.textContent.toLowerCase() === wall_a1.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a5.textContent;
+      wall_a5.style.color = 'rgba(0, 0, 0, 1)';
+      wall_5.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_1.style.backgroundColor = 'transparent';
+      wall_1.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a1.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }else if(WallTitle.textContent.toLowerCase() === wall_a5.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a4.textContent;
+      wall_a4.style.color = 'rgba(0, 0, 0, 1)';
+      wall_4.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_5.style.backgroundColor = 'transparent';
+      wall_5.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a5.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }else if(WallTitle.textContent.toLowerCase() === wall_a4.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a3.textContent;
+      wall_a3.style.color = 'rgba(0, 0, 0, 1)';
+      wall_3.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_4.style.backgroundColor = 'transparent';
+      wall_4.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a4.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }else if(WallTitle.textContent.toLowerCase() === wall_a3.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a2.textContent;
+      wall_a2.style.color = 'rgba(0, 0, 0, 1)';
+      wall_2.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_3.style.backgroundColor = 'transparent';
+      wall_3.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a3.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
+    }else if(WallTitle.textContent.toLowerCase() === wall_a2.textContent.toLowerCase()){
+      WallTitle.textContent = wall_a1.textContent;
+      wall_a1.style.color = 'rgba(0, 0, 0, 1)';
+      wall_1.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      wall_2.style.backgroundColor = 'transparent';
+      wall_2.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)';
+      wall_a2.style.color = 'rgba(255, 255, 255, 0.4000000059604645)';
     }
-    updateDisplay();
   }
 
-  function next() {
-    if (currentIndex === items.length - 1) {
-      currentIndex = 0;
-    } else {
-      currentIndex++;
-    }
-    updateDisplay();
-  }
 
-  function updateDisplay() {
-    for (var i = 0; i < items.length; i++) {
-      items[i].style.display = 'none';
-    }
-    items[currentIndex].style.display = 'block';
-  }
+
+  // var currentIndex = 0;
+  // var items = document.getElementsByClassName('item');
+
+  // function previous() {
+  //   if (currentIndex === 0) {
+  //     currentIndex = items.length - 1;
+  //   } else {
+  //     currentIndex--;
+  //   }
+  //   updateDisplay();
+  // }
+
+  // function next() {
+  //   if (currentIndex === items.length - 1) {
+  //     currentIndex = 0;
+  //   } else {
+  //     currentIndex++;
+  //   }
+  //   updateDisplay();
+  // }
+
+  // function updateDisplay() {
+  //   for (var i = 0; i < items.length; i++) {
+  //     items[i].style.display = 'none';
+  //   }
+  //   items[currentIndex].style.display = 'block';
+  // }
+
+
+  // Wall next and prev buttons
+
+
+  // const bodyWall = document.querySelectorAll('.bodyWall');
+  // const wall_1 = document.getElementById('wall-1');
+  // const wall_a1 = document.getElementById('wall-a1');
+  // const wall_2 = document.getElementById('wall-2');
+  // const wall_a2 = document.getElementById('wall-a2');
+  // const wall_3 = document.getElementById('wall-3');
+  // const wall_a3 = document.getElementById('wall-a3');
+  // const wall_4 = document.getElementById('wall-4');
+  // const wall_a4 = document.getElementById('wall-a4');
+  // const wall_5 = document.getElementById('wall-5');
+  // const wall_a5 = document.getElementById('wall-a5');
+  // let bwall;
+  // for(bwall of bodyWall){
+  //   bwall.style.cursor = 'pointer';
+  // }
+
+  // function Walls(e) {
+  //   WallTitle.textContent = e;
+    
+  //   }
+
+
+  // }  
+
+  // // wall_1.addEventListener('click',function(){
+  // //   Walls('Wall 1');
+  // // })
+
 
   function saveData() {
     let width = inputWidth.value;

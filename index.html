@@ -277,7 +277,7 @@
             </div>
           </div>
           <div class="body-left" id="imageContainer">
-            <span class="body-text29"><span>Wall 1</span></span>
+            <span class="body-text29"><span>WAll 1</span></span>
             <img
               src="public/external/placeholdervirtualroom3512-sq2x-700h.png"
               alt="PlaceholderVirtualRoom3512"
@@ -290,21 +290,21 @@
               <div class="item three"></div>
               <div class="item four"></div>
             </div>
-            <div class="body-next">
+            <div class="body-next" onclick="next()">
               <img
                 src="public/external/ellipse13519-b8wg-200h.png"
                 alt="Ellipse13519"
                 class="body-ellipse1"
-                onclick="next()"
+                
               />
               <img
                 src="public/external/teenyiconsarrowleftsolid3520-713.svg"
                 alt="teenyiconsarrowleftsolid3520"
                 class="body-teenyiconsarrowleftsolid"
-                onclick="previous()"
+                
               />
             </div>
-            <div class="body-prev">
+            <div class="body-prev" onclick="previous()">
               <img
                 src="public/external/ellipse13547-944q-200h.png"
                 alt="Ellipse13547"
@@ -331,20 +331,20 @@
               />
             </div>
             <div class="body-walls">
-              <div class="body-wall5">
-                <span class="body-text31"><span>WALL 5</span></span>
+              <div class="body-wall5 bodyWall" id="wall-5" onclick="Walls('Wall 5')">
+                <span class="body-text31"><span class="wallNumber" id="wall-a5">WALL 5</span></span>
               </div>
-              <div class="body-wall4">
-                <span class="body-text33"><span>WALL 4</span></span>
+              <div class="body-wall4 bodyWall" id="wall-4" onclick="Walls('Wall 4')">
+                <span class="body-text33"><span class="wallNumber"  id="wall-a4">WALL 4</span></span>
               </div>
-              <div class="body-wall3">
-                <span class="body-text35"><span>WALL 3</span></span>
+              <div class="body-wall3 bodyWall" id="wall-3" onclick="Walls('Wall 3')">
+                <span class="body-text35"><span class="wallNumber"  id="wall-a3">WALL 3</span></span>
               </div>
-              <div class="body-wall2">
-                <span class="body-text37"><span>WALL 2</span></span>
+              <div class="body-wall2 bodyWall" id="wall-2" onclick="Walls('Wall 2')">
+                <span class="body-text37"><span id="wall-a2">WALL 2</span></span>
               </div>
-              <div class="body-wall1">
-                <span class="body-text39"><span>WALL 1</span></span>
+              <div class="body-wall1 bodyWall" id="wall-1" onclick="Walls('Wall 1')">
+                <span class="body-text39"><span class="wallNumber"  id="wall-a1">WALL 1</span></span>
               </div>
             </div>
           </div>
