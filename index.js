@@ -322,8 +322,7 @@ function toggleCheckbox(image) {
   const wall_5 = document.getElementById('wall-5');
   const wall_a5 = document.getElementById('wall-a5');
 
-  const wallNumber = document.querySelectorAll('wallNumber')
-  console.log(wallNumber)
+
   function next() {
     
     if(WallTitle.textContent.toLowerCase() === wall_a1.textContent.toLowerCase()){
@@ -415,6 +414,49 @@ function toggleCheckbox(image) {
     }
   }
 
+  const bodyWall = document.querySelectorAll('.bodyWall')
+  for(let b of bodyWall){
+    b.style.cursor = 'pointer'
+  }
+  const wallNumber = document.querySelectorAll('.wallNumber')
+
+
+
+   function Walls(e) {
+    WallTitle.textContent = e;
+    for(let wall of bodyWall){
+      wall.style.backgroundColor = 'transparent';
+      wall.style.borderColor = 'rgba(255, 255, 255, 0.4000000059604645)'
+      for(let i of wallNumber){
+        i.style.color = 'rgba(255, 255, 255, 0.4000000059604645)'
+      }
+      // wallNumber.style.color = 'rgba(255, 255, 255, 0.4000000059604645)'
+      // for(let wallText of wallNumber){
+      //   wallText.style.color = 'rgba(255, 255, 255, 0.4000000059604645)'
+      //   console.log(wallText)
+      // }
+  
+      if(WallTitle.textContent === 'WALL 1'){
+        wall_a1.style.color = 'rgba(0, 0, 0, 1)';
+        wall_1.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+      }else if(WallTitle.textContent === 'WALL 2'){
+        wall_a2.style.color = 'rgba(0, 0, 0, 1)';
+        wall_2.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+      }else if(WallTitle.textContent === 'WALL 3') {
+        wall_a3.style.color = 'rgba(0, 0, 0, 1)';
+        wall_3.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+
+      }else if(WallTitle.textContent  === 'WALL 4') {
+        wall_a4.style.color = 'rgba(0, 0, 0, 1)';
+        wall_4.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+      }else if(WallTitle.textContent === 'WALL 5') {
+        wall_a5.style.color = 'rgba(0, 0, 0, 1)';
+        wall_5.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+      }
+    }
+    
+    }
+
 
 
   // var currentIndex = 0;
@@ -464,11 +506,6 @@ function toggleCheckbox(image) {
   // for(bwall of bodyWall){
   //   bwall.style.cursor = 'pointer';
   // }
-
-  // function Walls(e) {
-  //   WallTitle.textContent = e;
-    
-  //   }
 
 
   // }  
